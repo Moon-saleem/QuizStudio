@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#140850"
+    tools:context=".activities.CategorySelection">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_category">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_quiz_category"
+            android:textSize="25sp"
+            android:id="@+id/choose_quiz_text"
+            android:fontFamily="@font/asap_medium"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="#DC7506"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="230dp"
+            android:layout_height="200dp"
+            android:id="@+id/edu_card"
+            android:layout_centerHorizontal="true"
+            app:cardElevation="14dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="8dp"
+            android:layout_below="@id/choose_quiz_text">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:id="@+id/educard_linearlayout"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/subject_image"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Education"
+                    android:id="@+id/subject_name"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    android:textColor="#131212"
+                    android:fontFamily="@font/asap_medium"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="230dp"
+            android:layout_height="200dp"
+            android:id="@+id/life_card"
+            android:layout_centerHorizontal="true"
+            app:cardElevation="14dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="8dp"
+            android:layout_below="@id/edu_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:id="@+id/lifecard_linearlayout"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/subjectlife_image"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/relationship"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Life Style"
+                    android:id="@+id/realLife"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    android:textColor="#131212"
+                    android:fontFamily="@font/asap_medium"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

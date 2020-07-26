@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#140850"
+    android:id="@+id/sigUp_relative"
+    tools:context=".activities.RegisterationActivity">
+
+    <TextView
+        android:id="@+id/intro_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/asap_medium"
+        android:text="Introduce Yourself"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choose_text"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/intro_text"
+        android:text="@string/signup_text"
+        android:textSize="17sp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/asap_medium"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/linear_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/choose_text">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/asap_medium"
+                android:textSize="20sp"
+                android:checked="true"
+                android:textColor="#DC7506"
+                android:buttonTint="@android:color/holo_orange_dark"
+                android:layout_gravity="end"
+                android:id="@+id/radio_male"
+                android:text="Male"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:fontFamily="@font/asap_medium"
+                android:textColor="#DC7506"
+                android:buttonTint="@android:color/holo_orange_dark"
+                android:id="@+id/radio_female"
+                android:text="Female"
+                android:textAlignment="textStart"/>
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/linear_layout"
+        android:id="@+id/signup_username"
+        android:hint="Username"
+        android:padding="14dp"
+        android:background="@drawable/edittext_border"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@android:color/white"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:fontFamily="@font/asap_medium">
+
+    </com.google.android.material.textfield.TextInputEditText>
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/signup_username"
+        android:id="@+id/signup_Password"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:textColorHint="@android:color/white"
+        android:background="@drawable/edittext_border"
+        android:layout_marginStart="20dp"
+        android:textDirection="ltr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:fontFamily="@font/asap_medium">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/signup_Password"
+        android:id="@+id/signup_email"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/white"
+        android:padding="14dp"
+        android:background="@drawable/edittext_border"
+        android:layout_marginStart="20dp"
+        android:textDirection="ltr"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:fontFamily="@font/asap_medium">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <ProgressBar
+        android:layout_width="70dp"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_height="70dp"
+        android:layout_below="@id/signup_email"
+        android:indeterminateTint="@android:color/holo_orange_dark"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/register"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Continue"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/check"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/arvo_bold"
+        android:textColor="#DC7506"
+        android:elevation="18dp">
+
+    </Button>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
