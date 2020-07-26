@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private var subjectList=ArrayList<subjectModel>()
     private val iconsName = arrayOf("Chemistry", "Physics", "Computer", "Biology", "Math", "General", "History", "Technology", "Art & Science", "Geography", "Islamic", "English", "Software")
 
-
     private lateinit var recyclerView2: RecyclerView
     private lateinit var recyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
