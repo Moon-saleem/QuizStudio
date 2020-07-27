@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizstudio.R;
-import com.example.quizstudio.activities.QuizShowing;
+import com.example.quizstudio.activities.QuestionWithoutImageActivity;
 import com.example.quizstudio.models.itemModel;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.viewHolder> 
          viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, QuizShowing.class);
+                Intent intent=new Intent(context, QuestionWithoutImageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("type","             " + itemModelArrayList.get(position).getName());
                 context.startActivity(intent);

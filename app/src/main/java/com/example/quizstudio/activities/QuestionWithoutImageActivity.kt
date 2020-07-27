@@ -1,24 +1,29 @@
 package com.example.quizstudio.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.example.quizstudio.R
-import kotlinx.android.synthetic.main.activity_quiz_showing.*
+import kotlinx.android.synthetic.main.activity_question_without_image.*
 
-class QuizShowing : AppCompatActivity() {
+class QuestionWithoutImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_showing)
+
+        setContentView(R.layout.activity_question_without_image)
+//        supportActionBar?.hide()
 
         if (intent!=null)
         {
-            var type: String? =intent.getStringExtra("type")
-            textView.text = type
+            val type: String? =intent.getStringExtra("type")
+            tv_bookname.text=type
+
         }
-        supportActionBar?.title=textView.text
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
+
+
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

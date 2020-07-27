@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.QuizShowing"></activity>
+        <activity android:name=".activities.QuestionWithoutImageActivity">
+
+        </activity>
         <activity android:name=".activities.LifeStyle" />
         <activity android:name=".activities.CategorySelection">
             <intent-filter>
