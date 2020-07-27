@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context=".activities.QuestionActivityWithImage">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fusinon"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_bookname_style_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Style name"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/asap_medium"/>
+
+        <TextView
+            android:id="@+id/question_num_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_bookname_style_text"
+            android:text="Question 1/30"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/asap_medium"/>
+
+        <TextView
+            android:id="@+id/tv_question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Which country is also known as persia?"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_below="@id/question_num_text"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/asap_medium"/>
+        <ImageView
+            android:id="@+id/flag_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_below="@id/background_image"
+            android:src="@drawable/australia"
+            android:scaleType="fitXY"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bar_linear"
+            android:layout_marginStart="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@id/flag_image"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <ProgressBar
+                android:id="@+id/progress_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="12"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:indeterminate="false"/>
+
+            <TextView
+                android:id="@+id/question_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                tools:text="0/12"
+                android:text="0/30"
+                android:textColorHint="#000307"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/asap_medium"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/option_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_below="@id/bar_linear">
+
+            <TextView
+                android:id="@+id/option_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:textColor="#0F0F10"
+                android:background="@drawable/default_options_background"
+                android:text="Sri Lanka"
+                tools:text="Apple"
+                android:textSize="20sp"
+                android:fontFamily="@font/asap_medium"/>
+            <TextView
+                android:id="@+id/option_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:elevation="8dp"
+                android:textColor="#0F0F10"
+                android:background="@drawable/default_options_background"
+                android:text="America"
+                tools:text="Apple"
+                android:textSize="20sp"
+                android:fontFamily="@font/asap_medium"/>
+
+            <TextView
+                android:id="@+id/option_3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:elevation="8dp"
+                android:textColor="#0F0F10"
+                android:background="@drawable/default_options_background"
+                android:text="Kenya"
+                tools:text="Apple"
+                android:textSize="20sp"
+                android:fontFamily="@font/asap_medium"/>
+
+            <TextView
+                android:id="@+id/option_4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:elevation="8dp"
+                android:textColor="#0F0F10"
+                android:background="@drawable/default_options_background"
+                android:text="Iran"
+                tools:text="Apple"
+                android:textSize="20sp"
+                android:fontFamily="@font/asap_medium"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="NEXT"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/fusinon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/asap_medium"
+            android:layout_below="@id/option_linear_layout" />
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

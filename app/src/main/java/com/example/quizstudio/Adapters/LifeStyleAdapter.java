@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizstudio.R;
+import com.example.quizstudio.activities.QuestionActivityWithImage;
 import com.example.quizstudio.activities.QuestionWithoutImageActivity;
 import com.example.quizstudio.models.subjectModel;
 
@@ -43,7 +44,7 @@ public class LifeStyleAdapter extends RecyclerView.Adapter<LifeStyleAdapter.book
         bookViewholder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, QuestionWithoutImageActivity.class);
+                Intent intent=new Intent(context, QuestionActivityWithImage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("type","" + subjectModelArrayList.get(position).getSubjectName());
                 context.startActivity(intent);

@@ -42,7 +42,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.viewHolder> 
             public void onClick(View view) {
                 Intent intent=new Intent(context, QuestionWithoutImageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("type","             " + itemModelArrayList.get(position).getName());
+                intent.putExtra("type"," " + itemModelArrayList.get(position).getName());
                 context.startActivity(intent);
             }
         });

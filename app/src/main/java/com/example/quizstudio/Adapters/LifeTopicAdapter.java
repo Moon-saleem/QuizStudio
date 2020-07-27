@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizstudio.R;
+import com.example.quizstudio.activities.QuestionActivityWithImage;
 import com.example.quizstudio.activities.QuestionWithoutImageActivity;
 import com.example.quizstudio.models.itemModel;
 
@@ -40,7 +41,7 @@ public class LifeTopicAdapter extends RecyclerView.Adapter<LifeTopicAdapter.view
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, QuestionWithoutImageActivity.class);
+                Intent intent=new Intent(context, QuestionActivityWithImage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("type","" + itemModelArrayList.get(position).getName());
                 
